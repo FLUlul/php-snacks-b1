@@ -71,7 +71,7 @@
                 $day = $posts[$key];
                     for ($j=0; $j < count($posts[$key]) ; $j++) {
                         $post = $day[$j];
-                        echo "<h4>" . $post["title"] . "</h4>";
+                        echo "<h2>" . $post["title"] . "</h2>";
                         echo "<h4>" . $post["author"] . "</h4>";
                         echo "<p>" . $post["text"] . "</p>";
                     }
