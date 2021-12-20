@@ -9,6 +9,19 @@
     Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta -->
 </head>
 <body>
-    
+    <?php
+        $arrayNums = [];
+
+        while (count($arrayNums) < 15) {
+            $randNum = rand(1, 20);
+            if (!in_array($randNum, $arrayNums)) {
+                $arrayNums[] = $randNum;
+                echo "<div>";
+                    echo $randNum;
+                echo "</div>";
+            }
+        }
+        var_dump($arrayNums);
+    ?>
 </body>
 </html>
