@@ -14,8 +14,10 @@
 </head>
 <body>
     <?php
-        for ($i=0; $i < count($pieces) ; $i++) { 
-            echo $pieces[$i] . "<br>"; 
+        foreach ($pieces as $piece) {
+            if (strlen($piece) > 0) {
+                echo "<p>" . $piece . ".</p>";
+            }
         }
     ?>
 </body>
