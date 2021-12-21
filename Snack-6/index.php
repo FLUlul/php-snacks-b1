@@ -43,13 +43,14 @@
                 ],
             ]
         ];
-        $keys = array_keys($db);
+        
         $myDivClass = '';
-        for ($i=0; $i < count($keys); $i++) { 
-            $key = $keys[$i];
+        foreach ($db as $key => $tab) {
+            
             echo "<h4>" . $key . "</h4>";
             $tab = $db[$key];
-            for ($j=0; $j < count($tab); $j++) {
+            
+            foreach ($tab as $student) {
 
                 if ($key == 'teachers') {
                     $myDivClass = 'border-grey';
@@ -57,7 +58,7 @@
                     $myDivClass = 'border-green';
                 }
 
-               echo "<div class= $myDivClass >" . $tab[$j]["name"] . " " . $tab[$j]["lastname"] . "</div>";
+               echo "<div class= $myDivClass >" . $student["name"] . " " . $student["lastname"] . "</div>";
             }
         }
     ?>
